@@ -1,0 +1,47 @@
+.Header{
+    display: flex;
+    flex-direction: row;
+    height: 20%;
+}
+
+.MainLogo{
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    width: 20%;
+}
+
+.Logo {
+    width: 50%;
+    margin: 50px;
+}
+
+.Headers{
+    width: 80%;
+}
+
+.Menu{
+    display: flex;
+    justify-content: flex-start;
+    text-align: center;
+    align-items: end;
+    height: 50%;
+    margin: 20px;
+    list-style-type: none;
+}
+
+.Menu_Box{
+    width: 10%;
+    margin: 0 50px 0 50px;
+    font-size: 30px;
+}
+
+.Menu_Box a{
+    text-decoration: none;
+    color: black;
+}
+
+.Menu_Box a.active{
+    width: 100%;
+    border-bottom: 5px solid #FBE156;
+}
