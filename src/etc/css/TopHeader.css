@@ -1,0 +1,13 @@
+.TopHeader{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-end;
+    margin: 10px;
+    text-align: center;
+}
+.TopHeader_Box{
+    margin: 0 20px 0 20px;
+    font-size: 20px;
+    position: relative;
+}

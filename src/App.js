@@ -1,11 +1,80 @@
 import './App.css';
+import { Router, Route, Routes, BrowserRouter } from 'react-router-dom';
 import MainPage from './Main/MainPage';
+import LoginPage from '../src/User/Login/LoginPage';
+import RegisterPage from '../src/User/Register/RegisterPage';
+import NotFoundPage from '../src/etc/NotFoundPage';
+import SearchPage from '../src/Map/MapPage';
+import ReviewPage from '../src/Review/ReviewPage';
+import RecipePage from '../src/Recipe/RecipiePage';
+import LankingPage from '../src/Lanking/LankingPage';
+import MyPage from '../src/User/Mypage/MyPage';
+
 
 function App() {
+
+  const links = [
+    {
+      path:'',
+      element: <MainPage/>
+    },
+    {
+      path:'/',
+      element: <MainPage/>
+    },
+    {
+      path:'/main',
+      element: <MainPage/>
+    },
+    {
+      path:'/register',
+      element: <RegisterPage/>
+    },
+    {
+      path:'*',
+      element: <NotFoundPage/>
+    },
+    {
+      path:'/search',
+      element: <SearchPage/>
+    },
+    {
+      path:'/review',
+      element: <ReviewPage/>
+    },
+    {
+      path:'/recipe',
+      element: <RecipePage/>
+    },
+    {
+      path:'/lanking',
+      element: <LankingPage/>
+    },
+    {
+      path:'/mypage',
+      element: <MyPage/>
+    },
+  ]
+
+  const linkPage = () =>{
+    return(
+      links.map(route =>{
+        return(
+          <Route
+            key={route.path}
+            path={route.path}
+            element={route.element}/>
+        )
+      })
+    )
+  }
+
   return (
-    <div className="App">
-      <MainPage></MainPage>
-    </div>
+    <BrowserRouter>
+      <Routes>
+        {linkPage()}
+      </Routes>
+    </BrowserRouter>
   );
 }
 
